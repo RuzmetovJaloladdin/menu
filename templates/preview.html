@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preview Menu Item</title>
+</head>
+<body>
+    <h1>Preview Menu Item</h1>
+    <p>Item Name: {{ item_name }}</p>
+    <p>Item Description: {{ item_description }}</p>
+    <p>Item Price: {{ item_price }}</p>
+    <form action="{{ url_for('submit_menu_item') }}" method="post">
+        <input type="hidden" name="item_name" value="{{ item_name }}">
+        <input type="hidden" name="item_description" value="{{ item_description }}">
+        <input type="hidden" name="item_price" value="{{ item_price }}">
+        <button type="submit">Confirm</button>
+    </form>
+</body>
+</html>
